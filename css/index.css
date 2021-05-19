@@ -10,22 +10,43 @@
 }
 
 .landing{
-	background-image: url("../images/Desktop/bg1.jpg");
+	background-image: url("../images/Desktop/bg2.jpg");
 	width: 100vw;
 	height: 100vh;
+	/* background-size: 100% 100%;	 */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: grid;
-	grid-template-rows: auto 1fr 1fr 1fr;
+	grid-template-rows: 0.1fr 1fr;
+	grid-template-areas: 
+		'nav'
+		'title';
 }
 
-.container{
-	width: 100vw;
-	height: 100vh;
+.navbar{
 	display: grid;
+	grid-template-columns: 1fr 4fr 1fr ;
+	grid-template-areas: 'logo . navbar ';
+	grid-area: nav;
 }
 
+nav{
+	display: flex;
+	background-image: linear-gradient(to bottom right, rgba(244, 63, 93, 0.7), rgba(225, 29, 71, 0.7));
+	height: 5vh;
+	border-bottom-left-radius: 25px;
+	color: white;
+	font-family: "Cascadia Mono";
+	grid-area: navbar;
+	justify-self: end;
+}
+nav > a{
+	padding: 15px;
+	text-shadow: 1px 1px 2px rgba(41, 53, 66, 0.31);
+	color:white;
+	text-decoration: none;
+}
 .logo{
 	width: 70px;
 	height: 100px;
@@ -33,50 +54,40 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 70px 100px;
-	position: relative;
-	top: 20px;
-	left: 20px;
+	grid-area: logo;
+	align-self: end;
+	justify-self: center;
 }
 
 .title{
 	height: 100%;
 	width: 100%;
-	/* position: absolute; */
-	/* margin-top: auto;
-	margin-bottom: auto;
-	margin-left: auto;
-	margin-right: auto; */
+	grid-area: title;
+	/* align-self: center;
+	justify-self: center; */
 	font-weight: bold;
 	text-align: center;
 	font-family: "Cascadia Mono";
 	color: #dddddd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
+.test{
+	width: auto;
+	height: auto;
+	
+}
 .upperTitle{
-	font-size: 50px;
+	font-size: 4rem;
 	padding-top: 70px;
 	padding-bottom: 10px;
 }
 
 .lowerTitle{
-	font-size: 45px;
+	padding-bottom: 10vw;
+	font-size: 4rem;
 }
 
-.navbar{
-	width: 59em;
-	height: 50px;
-	position: absolute;
-	right: 0;
-	background-image: linear-gradient(to bottom right, rgba(244, 63, 93, 0.7), rgba(225, 29, 71, 0.7));
-	border-bottom-left-radius: 25px;
-	color: white;
-	font-family: "Cascadia Mono";
-}
-
-.navbar > span{
-	padding: 15px;
-	position: relative;
-	top: -2px;
-	float: right;
-	text-shadow: 1px 1px 2px rgba(41, 53, 66, 0.31);
-}
