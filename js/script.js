@@ -17,3 +17,12 @@ let scene = new ScrollMagic.Scene({
 .setTween(timeline)
 .setPin('section')
 .addTo(controller);
+
+let week1 = () => {
+    if(document.querySelector(".w1").style.display == "none"){
+        document.querySelector(".w1").style.display = "grid";
+    }
+    else {
+        document.querySelector(".w1").style.display = "none";
+    }
+}
